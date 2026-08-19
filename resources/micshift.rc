@@ -1,0 +1,6 @@
+#define APP_ICON 101
+#define APP_BANNER 102
+
+APP_ICON ICON "micshift.ico"
+APP_BANNER BITMAP "banner.bmp"
+1 24 "micshift.manifest"

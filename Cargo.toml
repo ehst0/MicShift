@@ -1,0 +1,28 @@
+[package]
+name = "micshift"
+version = "0.1.0"
+edition = "2021"
+description = "Native Windows system-tray microphone switcher"
+license = "GPL-3.0-only"
+
+[lib]
+name = "micshift"
+path = "src/lib.rs"
+
+[[bin]]
+name = "MicShift"
+path = "src/bin/tray.rs"
+
+[[bin]]
+name = "MicShiftConsole"
+path = "src/bin/console.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
